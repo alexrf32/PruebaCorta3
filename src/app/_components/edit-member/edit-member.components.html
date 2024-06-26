@@ -1,0 +1,25 @@
+<!-- src/app/_pages/edit-member/edit-member.component.html -->
+<div class="p-4">
+    <h2 class="text-xl mb-4">Editar Integrante</h2>
+    <form (ngSubmit)="editarIntegrante()">
+      <div class="mb-4">
+        <label class="block text-gray-700">Nombre</label>
+        <input [(ngModel)]="member.name" name="name" class="mt-1 block w-full" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Correo electrónico</label>
+        <input [(ngModel)]="member.email" name="email" type="email" class="mt-1 block w-full" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Semestre</label>
+        <input [(ngModel)]="member.semester" name="semester" class="mt-1 block w-full" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Carrera</label>
+        <input [(ngModel)]="member.career" name="career" class="mt-1 block w-full" required>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2">Guardar</button>
+    </form>
+    <div *ngIf="mensaje" class="mt-4 text-green-500">{{ mensaje }}</div>
+  </div>
+  
